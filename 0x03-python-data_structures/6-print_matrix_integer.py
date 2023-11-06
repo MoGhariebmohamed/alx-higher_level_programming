@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-def print_list_integer(my_list=[]):
-    for mlist in my_list:
-        print("{:d}".format(mlist))
+def print_matrix_integer(matrix=[[]]):
+    for x in range(len(matrix)):
+        for z in range(len(matrix[x])):
+            print("{:d}".format(matrix[x][z]), end="")
+        print("")
+
