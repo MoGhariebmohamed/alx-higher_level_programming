@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def max_integer(my_list=[]):
     if len(my_list) == 0:
-         return (None)
+        return (None)
     else:
         sortlist = sorted(my_list)
-        return (sortlist[-1])
+        max_list = sortlist[-1]
+        return (max_list)
