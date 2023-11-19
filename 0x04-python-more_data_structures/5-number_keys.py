@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-def only_diff_elements(set_1, set_2):
-    x = set(set_1.symmetric_difference(set_2))
+def number_keys(a_dictionary):
+    x = len(a_dictionary)
     return (x)
