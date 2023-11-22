@@ -4,4 +4,11 @@
 
 class Square:
     """for squre dimensions"""
-    pass
+    
+    def __init__(self, size):
+        """lets initiate new square
+        
+        Args:
+            size : For getting  size of the new square.
+        """
+        self.__size = size
