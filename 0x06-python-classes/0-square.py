@@ -3,10 +3,10 @@
 
 
 class Square:
-    """for squre dimensions
-
-    Args:
+    """for squre dimensions"""
+    def __init__(self, size):
+        """lets initiate new square
+        Args:
             size (int): For getting  size of the new square.
         """
-    def __init__(self, size):
         self.__size = size
