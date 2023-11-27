@@ -10,13 +10,13 @@ class Rectangle:
         Arg:
             width: the rectungler width
             height: the rectungler height"""
-        self.__width__ = width
-        self.__height__ = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
         """the getter for value"""
-        return (self.__width__)
+        return (self.__width)
 
     @width.setter
     def width(self, value):
@@ -30,7 +30,7 @@ class Rectangle:
     @property
     def height(self):
         """for getting the height"""
-        return (self.height)
+        return (self.__height)
 
     @height.setter
     def height(self, value):
