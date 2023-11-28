@@ -1,0 +1,98 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+This is an example text file in reStructuredText format. First import
+``add_integer`` from the ``0-add_integer`` module:
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+===========================
+test cases for 0-add_integer.py
+===========================
+
+the file for addition function ``add_integer(a, b=98)``.
+
+Usage
+=====
+
+
+``add_integer(...)``` returns the addition of its two integers. 
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+test 0 for add:
+    >>> add_integer(2, 3)
+    5
+
+test 1 add neg:
+    >>> add_integer(2, -3)
+    -1
+
+test 2 floatadd:
+    >>> add_integer(2.0, 3.0)
+    5
+
+test 3 floatwith:
+    >>> add_integer(2.9, 0.2)
+    2
+
+test 4 Floatneg:
+    >>> add_integer(-2.9, -0.2)
+    -2
+
+test 5 floatandneg:
+    >>> add_integer(2.3, -3)
+    -1
+
+test 6 oneitem:
+    >>> add_integer(2)
+    100
+
+test 7 notInt a:
+    >>> add_integer("hello", 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+test 8 notInt b:
+    >>> add_integer(2, "hello")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+test 9 nothing:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+test 10 only a:
+    >>> add_integer(2.3, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+test 11 not int a&b:
+    >>> add_integer("hello", "there")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+test 12 float inf a:
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+     
+test 13 float inf b:
+    >>> add_integer(2, float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+test 14 float int a:
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+test 15 float int b:
+    >>> add_integer(2, float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
