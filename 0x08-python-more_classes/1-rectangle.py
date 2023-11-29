@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python5
 """its for defines a rectungler"""
 
 
@@ -9,7 +9,8 @@ class Rectangle:
 
         Arg:
             width: the rectungler width
-            height: the rectungler height"""
+            height: the rectungler height
+        """
         self.width = width
         self.height = height
 
@@ -21,11 +22,11 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """the setter for width values"""
-        if type(width) != int:
+        if type(value) != int:
             raise TypeError("width must be an integer")
-        elif (width < 0):
+        elif (value < 0):
             raise ValueError("width must be >= 0")
-        self.width = value
+        self.__width = value
 
     @property
     def height(self):
@@ -35,8 +36,8 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """for setting values"""
-        if type(height) != int:
+        if type(value) != int:
             raise TypeError("height must be an integer")
-        elif (width < 0):
+        elif (value < 0):
             raise ValueError("height must be >= 0")
-        self.height = value
+        self.__height = value
