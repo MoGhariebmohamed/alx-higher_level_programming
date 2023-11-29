@@ -63,4 +63,7 @@ class Rectangle:
         return (prtt)
 
     def __repr__(self):
-        return Rectangle((: d), (: d)).formate(self.__width, self.__height)
+        """for developer check object and methods"""
+        ReternStr = "Rectangle(" + str(self.__width) + ","
+        ReternStr += str(self.__height) + ")"
+        return ReternStr
