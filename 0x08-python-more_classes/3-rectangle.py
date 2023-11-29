@@ -53,6 +53,7 @@ class Rectangle:
             return (0)
         else:
             return (Perm)
+
     def __str__(self):
         """method to user friendly represent"""
         if (self.width != 0 and self.height != 0):
