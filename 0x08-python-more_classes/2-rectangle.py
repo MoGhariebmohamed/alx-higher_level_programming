@@ -45,6 +45,7 @@ class Rectangle:
     def area(self):
         """to get the area of rectungler"""
         return (self.width * self.height)
+
     def perimeter(self):
         """to get permiter of the rectungler"""
         Perm = 2 * (self.width + self.height)
