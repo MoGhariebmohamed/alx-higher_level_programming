@@ -1,4 +1,4 @@
-#!/usr/bin/python5
+#!/usr/bin/python3
 """its for defines a rectungler"""
 
 
