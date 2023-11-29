@@ -61,6 +61,7 @@ class Rectangle:
         if (self.width != 0 and self.height != 0):
             prtt = "\n".join("#" * self.width for x in range(self.height))
         return (prtt)
+
     def __repr__(self):
         ReternStr = "Rectangle(" + str(self.__width) + ","
         ReternStr += str(self.__height) + ")"
