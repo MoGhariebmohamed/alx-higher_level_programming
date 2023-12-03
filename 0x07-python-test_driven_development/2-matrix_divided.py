@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """this to get matrix in module"""
+
+
 def matrix_divided(matrix, div):
     """
     the matrix div function return two matrix_divided
