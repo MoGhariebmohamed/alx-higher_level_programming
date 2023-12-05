@@ -5,7 +5,6 @@
 class BaseGeometry:
     """an empty class"""
 
-
     def area(self):
         """
         this function to raise message
