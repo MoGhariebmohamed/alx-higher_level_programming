@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """this for inherting class"""
+
+
 class MyList(list):
     """
     inhernt class from list
