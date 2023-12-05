@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""this module to identify instance of parent class"""
+
+
 def is_same_class(obj, a_class):
     """
     this function to exactly an instance of class
@@ -9,5 +12,4 @@ def is_same_class(obj, a_class):
     """
     if (type(obj) == a_class):
         return True
-    else:
-        return False
+    return False

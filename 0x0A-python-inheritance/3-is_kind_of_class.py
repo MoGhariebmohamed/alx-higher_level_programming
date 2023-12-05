@@ -3,8 +3,9 @@
 
 
 def is_kind_of_class(obj, a_class):
-    """ 
+    """
     this function to exactly an instance of class
+
     Args:
         obj: the object itself
         a_class: the class to be checked
