@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """module for class"""
 
+
 class BaseGeometry:
     """an empty class"""
 
