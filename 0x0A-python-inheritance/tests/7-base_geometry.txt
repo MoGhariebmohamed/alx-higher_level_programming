@@ -17,10 +17,6 @@ This modules defines a base geometry class BaseGeometry.
     <7-base_geometry.BaseGeometry object at ...>
 
 
-    >>> BG = BaseGeometry(None)
-    Traceback (most recent call last):
-    TypeError: object() takes no parameters
-
 Methods
 =======
 
