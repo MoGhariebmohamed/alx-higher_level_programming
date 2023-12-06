@@ -12,4 +12,4 @@ def write_file(filename="", text=""):
     if (type(text) != str):
         text = str(text)
     with open(filename, "w", encoding="utf-8") as x:
-            return (x.write(text))
+        return (x.write(text))
