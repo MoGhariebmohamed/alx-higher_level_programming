@@ -11,8 +11,8 @@ class Rectangle:
             width: the rectungler width
             height: the rectungler height
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -64,4 +64,12 @@ class Rectangle:
 
     def __repr__(self):
         """for developer check object and methods"""
-        return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
+        ReternStr = "Rectangle(" + str(self.__width) + ","
+        ReternStr += str(self.__height) + ")"
+        return ReternStr
+
+    def __del__(self):
+    """ for delete the class"""
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
+
