@@ -46,8 +46,21 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         """print area"""
-        return (self.__width * self.__height)
+        return ("[Rectangle] " + str(self.__width) + "/" + str(self__height))
+
+
+class Square(Rectangle):
+    """Square class"""
+
+    def __init__(self, size):
+        self.__size = size
+        super().__init__(self.__size, self.__size)
+        BaseGeometry.integer_validator(self, "size", self.__size)
+
+    def area(self):
+        """print area"""
+        return (self.__size * self.__size)
 
     def __str__(self):
         """string of the area"""
-        return ("[Rectangle] " + str(self.__width) + "/" + str(self.__height))
+        return ("[Square] " + str(self.__size) + "/" + str(self.__size))
