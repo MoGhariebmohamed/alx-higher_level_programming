@@ -4,6 +4,10 @@
 
 class Rectangle:
     """for rectungler dimensions"""
+
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """for initiate the dims
 
@@ -11,8 +15,9 @@ class Rectangle:
             width: the rectungler width
             height: the rectungler height
         """
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -59,17 +64,14 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
         if (self.width != 0 and self.height != 0):
-            prtt = "\n".join("#" * self.width for x in range(self.height))
+            prtt = "\n".join(Rectangle.print_symbol * self.width for x in range(self.height))
         return (prtt)
 
     def __repr__(self):
         """for developer check object and methods"""
-        ReternStr = "Rectangle(" + str(self.__width) + ","
-        ReternStr += str(self.__height) + ")"
-        return ReternStr
+        return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
 
     def __del__(self):
-    """ for delete the class"""
+        """method to delte"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-
