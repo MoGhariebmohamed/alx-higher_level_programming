@@ -64,8 +64,8 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
         if (self.width != 0 and self.height != 0):
-            prtt = "\n".join(Rectangle.print_symbol * self.width for x in range(self.height))
-        return (prtt)
+            prtt = ((str(self.print_symbol) * self.width + "\n") * self.height)
+            return (prtt)
 
     def __repr__(self):
         """for developer check object and methods"""
