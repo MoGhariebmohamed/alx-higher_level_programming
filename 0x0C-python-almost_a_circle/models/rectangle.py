@@ -88,3 +88,9 @@ class Rectangle(Base):
             for ww in range(self.__width):
                 print("#", end="")
             print("")
+
+    def __str__(self):
+        """method so that it returns id"""
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
+                                                        self.y, self.width,
+                                                        self.height))
