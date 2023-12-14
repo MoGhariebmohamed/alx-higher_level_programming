@@ -20,4 +20,40 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        super.__init__(id)
+        super().__init__(id)
+
+    @property
+    def width(self):
+        """to set width"""
+        return (self.__width)
+
+    @width.setter
+    def width(self, value):
+        self.__width = value
+
+    @property
+    def height(self):
+        """to set privete attributes"""
+        return (self.__height)
+
+    @height.setter
+    def height(self, value):
+        self.__height = value
+
+    @property
+    def x(self):
+        """to set privete x"""
+        return (self.__x)
+
+    @x.setter
+    def x(self, value):
+        self.__x = value
+
+    @property
+    def y(self):
+        """to set privete y"""
+        return (self.__y)
+
+    @y.setter
+    def y(self, value):
+        self.__y = value
