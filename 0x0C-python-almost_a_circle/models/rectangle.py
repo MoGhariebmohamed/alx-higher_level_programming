@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """for inhent class from base"""
 
+
 class Rectangle(Base):
     """inhent class from base class"""
-
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
