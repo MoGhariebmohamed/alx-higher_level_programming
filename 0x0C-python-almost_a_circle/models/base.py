@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" for base class"""
+
+
 class Base:
     """a base class"""
 
