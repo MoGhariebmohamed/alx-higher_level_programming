@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """for inhent class from base"""
-from models.base import base
+from models.base import Base
 
 class Rectangle(Base):
     """inhent class from base class"""
