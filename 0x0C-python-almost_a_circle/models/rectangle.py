@@ -96,9 +96,9 @@ class Rectangle(Base):
     def update(self, *args):
         """
         assigns an argument to each attribute
-        
+
         Args:
-            Args: the input unlimited
+            args: the input unlimited
         """
         attr = ['id', 'width', 'height', 'x', 'y']
         for i, arg in enumerate(args):
