@@ -17,3 +17,8 @@ class Square(Rectangle):
             id: the Rectangle length
         """
         super().__init__(size, size, x, y)
+
+    def __str__(self):
+        """method so that it returns id"""
+        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x,
+                                                self.y, self.width))
