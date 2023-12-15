@@ -93,14 +93,14 @@ class Rectangle(Base):
                 print("#", end="")
             print("")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         assigns an argument to each attribute
 
         Args:
             args: the input unlimited
+            kwargs: the dictinary of id and value
         """
-        attr = ['id', 'width', 'height', 'x', 'y']
         attr = ['id', 'width', 'height', 'x', 'y']
         if args != 0 and len(args) != 0:
             for i, arg in enumerate(args):
