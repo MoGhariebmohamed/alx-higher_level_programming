@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ for base class"""
-
+import json
 
 class Base:
     """a base class"""
@@ -31,4 +31,5 @@ class Base:
         """
         if list_dictionaries is None or list_dictionaries == []:
             return ("[]")
-        return (json.dumps(list_dictionaries))
+        else:
+           return (json.dumps(list_dictionaries))
