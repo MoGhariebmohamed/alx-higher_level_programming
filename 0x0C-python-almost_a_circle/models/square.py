@@ -16,7 +16,7 @@ class Square(Rectangle):
             y: y-axis empty length
             id: the Rectangle length
         """
-        super().__init__(size, size, x, y)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """method so that it returns id"""
