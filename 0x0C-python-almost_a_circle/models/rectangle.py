@@ -88,7 +88,7 @@ class Rectangle(Base):
             print("")
         for hh in range(self.__height):
             for yy in range(self.y):
-                print(" ")
+                print(" ", end="")
             for ww in range(self.__width):
                 print("#", end="")
             print("")
