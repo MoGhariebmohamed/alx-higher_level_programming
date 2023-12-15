@@ -101,8 +101,14 @@ class Rectangle(Base):
             args: the input unlimited
         """
         attr = ['id', 'width', 'height', 'x', 'y']
-        for i, arg in enumerate(args):
-            setattr(self, attr[i], arg)
+        attr = ['id', 'width', 'height', 'x', 'y']
+        if args != 0 and len(args) != 0:
+            for i, arg in enumerate(args):
+                setattr(self, attr[i], arg)
+        elif kwargs != 0 and len(kwargs) != 0:
+            for key, value in kwargs.items():
+                if key in attr:
+                    setattr(self, key, value)
 
     def __str__(self):
         """method so that it returns id"""
