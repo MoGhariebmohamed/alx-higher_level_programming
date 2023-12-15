@@ -93,6 +93,17 @@ class Rectangle(Base):
                 print("#", end="")
             print("")
 
+    def update(self, *args):
+        """
+        assigns an argument to each attribute
+        
+        Args:
+            Args: the input unlimited
+        """
+        attr = ['id', 'width', 'height', 'x', 'y']
+        for i, arg in enumerate(args):
+            setattr(self, attr[i], arg)
+
     def __str__(self):
         """method so that it returns id"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
