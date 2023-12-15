@@ -77,6 +77,6 @@ class Base:
             if cls.__name__ == "Rectangle":
                 NewDict = cls(1, 1)
             else:
-                NewDicte = cls(1)
-            NewDicte.update(**dictionary)
-            return NewDicte
+                NewDict = cls(1)
+            NewDict.update(**dictionary)
+            return NewDict
