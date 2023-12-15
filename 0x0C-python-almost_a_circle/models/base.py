@@ -56,11 +56,11 @@ class Base:
     def from_json_string(json_string):
         """
         returns the list of the JSON string representation
- 
+
         Args:
             json_string: the string from json
         """
-        if json_string is None or json_string == []:
+        if json_string is None or json_string == "[]":
             return ("[]")
         else:
             return (json.loads(json_string))
