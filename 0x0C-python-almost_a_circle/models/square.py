@@ -45,6 +45,13 @@ class Square(Rectangle):
                 if key in attr:
                     setattr(self, key, value)
 
+    def to_dictionary(self):
+        """ returns the dictionary representation of a Rectangle"""
+        return {"id": self.id,
+                "size": self.width,
+                "x": self.x,
+                "y": self.y}
+
     def __str__(self):
         """method so that it returns id"""
         return ("[Square] ({}) {}/{} - {}".format(self.id, self.x,
