@@ -2,6 +2,7 @@
 """ for base class"""
 import json
 
+
 class Base:
     """a base class"""
 
@@ -32,4 +33,4 @@ class Base:
         if list_dictionaries is None or list_dictionaries == []:
             return ("[]")
         else:
-           return (json.dumps(list_dictionaries))
+            return (json.dumps(list_dictionaries))
