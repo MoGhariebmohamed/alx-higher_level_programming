@@ -28,6 +28,23 @@ class Square(Rectangle):
         """to set value for size"""
         self.width = self.height = value
 
+    def update(self, *args, **kwargs):
+        """
+        assigns an argument to each attribute
+
+        Args:
+            args: the input unlimited
+            kwargs: the dictinary of id and value
+        """
+        attr = ['id', 'size', 'x', 'y']
+        if args != 0 and len(args) != 0:
+            for i, arg in enumerate(args):
+                setattr(self, attr[i], arg)
+        elif kwargs != 0 and len(kwargs) != 0:
+            for key, value in kwargs.items():
+                if key in attr:
+                    setattr(self, key, value)
+
     def __str__(self):
         """method so that it returns id"""
         return ("[Square] ({}) {}/{} - {}".format(self.id, self.x,
