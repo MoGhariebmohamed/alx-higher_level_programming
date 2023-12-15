@@ -110,6 +110,14 @@ class Rectangle(Base):
                 if key in attr:
                     setattr(self, key, value)
 
+    def to_dictionary(self):
+        """ returns the dictionary representation of a Rectangle"""
+        return {"id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y}
+
     def __str__(self):
         """method so that it returns id"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
