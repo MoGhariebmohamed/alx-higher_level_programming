@@ -51,3 +51,16 @@ class Base:
             else:
                 MakeDict = [op.to_dictionary() for op in list_objs]
                 OpenFile.write(Base.to_json_string(MakeDict))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        returns the list of the JSON string representation
+ 
+        Args:
+            json_string: the string from json
+        """
+        if json_string is None or json_string == []:
+            return ("[]")
+        else:
+            return(json.loads(json_string))
