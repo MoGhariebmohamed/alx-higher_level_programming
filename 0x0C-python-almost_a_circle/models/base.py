@@ -88,6 +88,6 @@ class Base:
         try:
             with open(FileName, "r", encoding="utf-8") as OpenFile:
                 ListDicts = Base.from_json_string(OpenFile.read())
-                return [cls.create(**d) for dd in ListDicts]
+                return [cls.create(**dd) for dd in ListDicts]
         except IOError:
             return []
