@@ -80,3 +80,14 @@ class Base:
                 NewDict = cls(1)
             NewDict.update(**dictionary)
             return NewDict
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances file of JSON strings"""
+        FileName = str(cls.__name__) + ".json"
+        try:
+            with open(FileName, "r", encoding="utf-8") as OpenFile:
+                ListDicts = Base.from_json_string(OpenFile.read())
+                return [cls.create(**d) for dd in ListDicts]
+        except IOError:
+            return []
