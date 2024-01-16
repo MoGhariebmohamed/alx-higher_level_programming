@@ -1,3 +1,2 @@
--- script that creates the database hbtn_0c_0 in your MySQL server.
-USE mysql;
+-- script that show tables of the database in MySQL server.
 SHOW TABLES;
