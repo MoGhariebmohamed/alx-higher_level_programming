@@ -1,3 +1,6 @@
 #!/bin/bash
 git add .
-git commit -m echo $("t v") | git push
+commitMessage=${1-:"Automated commit"}
+git commit -m "$commitMessage"
+git push
+
