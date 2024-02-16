@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-script should take 3 arguments: mysql username, mysql password and database name
+script take 3 arguments: mysql username, mysql password and database name
 """
 import MySQLdb
 from sys import argv
