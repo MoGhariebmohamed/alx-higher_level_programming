@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+script should take 3 arguments: mysql username, mysql password and database name
+"""
 import MySQLdb
 from sys import argv
 
@@ -14,7 +17,7 @@ def myFunction(username, password, name):
     db = MySQLdb.connect(host="localhost", port=3306, user=str(username),
                          passwd=str(password), db=str(name), charset="utf8")
     cur = db.cursor()
-    tablSelect = cur.execute("SELECT * FROM states ORDER BY id")
+    tablSelect = cur.execute("SELECT * FROM states ORDER BY id;")
     rows = cur.fetchall()
     for row in rows:
         print(row)
