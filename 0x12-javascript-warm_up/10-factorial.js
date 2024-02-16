@@ -1,11 +1,17 @@
 #!/usr/bin/node
 function factorial (a) {
-  a = process.argv[2];
-  const sum = Number(a) + Number(b);
-  if (isNaN(a)) {
-    console.log(1);
+  if (a === 1 || a === 0) {
+    return 1;
   } else {
-      for (let i = 0; i <= a; i--) {
-        console.log(sum);
-  }
-}add();
+      return a * factorial(a - 1);
+        }
+}
+
+const input1 = process.argv[2];
+if (isNaN(input1)) {
+  console.log(1);
+}
+else {
+  console.log(factorial(input1));
+}
+  
