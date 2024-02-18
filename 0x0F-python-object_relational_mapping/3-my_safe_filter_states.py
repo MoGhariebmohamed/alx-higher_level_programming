@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-scripttake 3 arguments: mysql username, mysql password and database name
+script that put all states with a name starting N from database hbtn_0e_0_usa
 """
+import sys
 import MySQLdb
 from sys import argv
 
@@ -13,14 +14,17 @@ def myFunction(username, password, name):
         username: the db username
         password: db password
         name: name
+        state: the searched state
     """
     db = MySQLdb.connect(host="localhost", port=3306, user=str(username),
                          passwd=str(password), db=str(name), charset="utf8")
     cur = db.cursor()
-    tablSelect = cur.execute("SELECT * FROM states ORDER BY id;")
+    tablSelect = cur.execute("SELECT * FROM states WHERE name LIKE BINARY'{}'"
+                             "ORDER BY `id`".format(argv[4]))
     rows = cur.fetchall()
     for row in rows:
-        print(row)
+        if row[1] == sys.argv[4]:
+            print(row)
     # Close all cursors
     cur.close()
     # Close all databases
