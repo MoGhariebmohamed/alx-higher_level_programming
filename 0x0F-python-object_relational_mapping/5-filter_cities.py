@@ -14,7 +14,7 @@ def myFunction(username, password, name):
         username: the db username
         password: db password
         name: name
-    """
+   """ 
     db = MySQLdb.connect(host="localhost", port=3306, user=str(username),
                          passwd=str(password), db=str(name), charset="utf8")
     cur = db.cursor()
@@ -25,7 +25,7 @@ def myFunction(username, password, name):
     for row in rows:
         # for prevent code injection .format(argv[4]) LIKE BINARY'{}'
         if row[4] == sys.argv[4]:
-            print(", ".join(row[2]))
+            print("".join(row[2]), ", ",end="")
     # Close all cursors
     cur.close()
     # Close all databases
@@ -34,3 +34,4 @@ def myFunction(username, password, name):
 
 if __name__ == '__main__':
     myFunction(argv[1], argv[2], argv[3])
+    
