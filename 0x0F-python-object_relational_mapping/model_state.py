@@ -2,8 +2,9 @@
 """
 script that put all states with a name starting N from database hbtn_0e_0_usa
 """
-import MySQLdb
-from sys import argv
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+
 
 Base = declarative_base()
 
