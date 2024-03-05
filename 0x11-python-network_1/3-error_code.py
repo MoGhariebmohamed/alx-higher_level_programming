@@ -12,4 +12,3 @@ if __name__ == "__main__":
             print(respons.read().decode('utf-8'))
     except error.HTTPError as error0:
         print("Error code: {}".format(error0.status))
-
