@@ -4,7 +4,6 @@
 
 if __name__ == "__main__":
     import requests
-    imporet sys
 
     my_req = requests.get('https://alx-intranet.hbtn.io/status')
     to_text = my_req.text
