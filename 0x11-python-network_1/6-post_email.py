@@ -8,5 +8,5 @@ if __name__ == "__main__":
 
     new_url = argv[1]
     mail = argv[2]
-    new_req = post(new_url, {'email': mail})
+    new_req = post(new_url, {'Your email is': mail})
     print(new_req.text)
