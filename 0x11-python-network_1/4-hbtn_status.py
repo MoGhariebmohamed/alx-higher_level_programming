@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""takes in a URL and an email, sends a POST request to the passed URL """
+"""t takes in a URL, sends a request to the URL and displays the variable """
 
 
 if __name__ == "__main__":
     import requests
+    imporet sys
 
     my_req = requests.get('https://alx-intranet.hbtn.io/status')
     to_text = my_req.text
