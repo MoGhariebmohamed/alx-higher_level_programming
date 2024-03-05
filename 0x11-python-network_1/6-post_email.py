@@ -3,7 +3,7 @@
 
 
 if __name__ == "__main__":
-    from requests importpost
+    from requests import post
     from sys import argv
 
     new_url = argv[1]
