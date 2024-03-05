@@ -1,19 +1,4 @@
 #!/usr/bin/node
-const Square_inh = require('./5-square');
+const nbOccurences = (list, searchElement) => list.filter((element) => searchElement === element).length;
 
-class Square extends Square_inh {
-  charPrint (c) {
-    if (c === undefined) {
-      c = 'X';
-    }
-    for (let i = 0; i < this.height; i++) {
-      let s = '';
-      for (let j = 0; j < this.width; j++) {
-        s += c;
-      }
-      console.log(s);
-    }
-  }
-}
-
-module.exports = Square;
+module.exports = { nbOccurences };
