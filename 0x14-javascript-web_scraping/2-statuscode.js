@@ -2,12 +2,12 @@
 // to WRITE from file
 
 const request = require('request');
-const url_link = process.argv[2];
+const urlLink = process.argv[2];
 
-getit.get(url_link,  function (errorr, ok_response) {
-    if (errorr) {
-      console.log(errorr);
-    } else {
-	    console.log("code: " + ok_response.statusCode)
+request.get(urlLink, function (errorr, okResponse) {
+  if (errorr) {
+    console.log(errorr);
+  } else {
+    console.log('code: ' + okResponse.statusCode);
   }
 });
