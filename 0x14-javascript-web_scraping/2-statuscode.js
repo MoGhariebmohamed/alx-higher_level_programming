@@ -1,11 +1,13 @@
-#!/usr/bin/n//to read from file
-//to WRITE from file
+#!/usr/bin/node
+// to WRITE from file
 
-const files = require('fs');
+const request = require('request');
+const url_link = process.argv[2];
 
-fs.writeFile(process.argv[2], process.argv[3], 'utf-8',
-  function (errorr) {
+getit.get(url_link,  function (errorr, ok_response) {
     if (errorr) {
       console.log(errorr);
-    }
-  });
+    } else {
+	    console.log("code: " + ok_response.statusCode)
+  }
+});
