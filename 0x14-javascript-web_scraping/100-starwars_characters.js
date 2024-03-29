@@ -9,9 +9,8 @@ request.get(urlLink, function (errorr, okResponse, body) {
     console.log(errorr);
   } else {
     const dataShow = JSON.parse(body);
-    const charchter = dataShow.charchters
-    for (const charchter of charchters) {
-      request.get(charchter, function (error, response, body) {
+    for (const character of dataShow.characters) {
+      request.get(character, function (error, response, body) {
         if (errorr) {
           console.log(errorr);
 	} else {
