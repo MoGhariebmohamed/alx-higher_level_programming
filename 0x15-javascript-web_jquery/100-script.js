@@ -1,2 +1,6 @@
 // change color without using selector jquery
-$('HEADER').css({ color: '#FF0000' });
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('header').style.color = '#FF0000';
+  }, false);
+})();
